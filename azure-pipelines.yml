@@ -1,9 +1,14 @@
+variables:
+  CLI_VERSION: "0.1.2"
+
 jobs:
 - job: Check
   pool:
     vmImage: 'ubuntu-16.04'
-  container: librepcb/librepcb-cli:0.1.2
+  container:
+    image: ubruhin/librepcb-cli-dev:$(CLI_VERSION)
+    options: --entrypoint /bin/bash
   steps:
-  - bash: echo "Hello World"
-  - bash: librepcb-cli open-library --all --save .
-  - bash: git diff --exit-code  # fail if there are local changes
+  - script: echo "Hello World"
+#  - bash: librepcb-cli open-library --all --save .
+#  - bash: git diff --exit-code  # fail if there are local changes
