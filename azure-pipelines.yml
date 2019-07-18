@@ -1,0 +1,9 @@
+jobs:
+- job: Check
+  pool:
+    vmImage: 'ubuntu-16.04'
+  container: librepcb/librepcb-cli:0.1.2
+  steps:
+  - bash: echo "Hello World"
+  - bash: librepcb-cli open-library --all --save .
+  - bash: git diff --exit-code  # fail if there are local changes
