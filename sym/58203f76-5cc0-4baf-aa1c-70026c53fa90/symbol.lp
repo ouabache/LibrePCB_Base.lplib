@@ -1,7 +1,7 @@
 (librepcb_symbol 58203f76-5cc0-4baf-aa1c-70026c53fa90
  (name "Switch DPDT 2-Position EU")
  (description "Double-Pole Double-Throw switch, European symbol (IEC 60617).")
- (keywords "switch,spdt,double-pole,double-throw")
+ (keywords "switch,dpdt,double-pole,double-throw")
  (author "Danilo Bargen")
  (version "0.1")
  (created 2019-07-31T20:45:45Z)
